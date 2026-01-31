@@ -9,7 +9,7 @@
     "dev": "node --watch --env-file=.env server.js",
     "test": "vitest",
     "test:database": "vitest database",
-    "test:server": "vitest server",
+    "test:server": "vitest --bail 1 server",
     "db:schema": "psql -U filez_user -h localhost -d filez -f db/schema.sql",
     "db:seed": "node --env-file=.env db/seed.js",
     "db:reset": "npm run db:schema && npm run db:seed"
